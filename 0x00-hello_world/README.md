@@ -1,0 +1,1 @@
+This directory contains files containg diffrent C scripts as described by each file's commit statement.
