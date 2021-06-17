@@ -13,7 +13,7 @@ int main(void)
 	long along;
 	long long alonglong;
 	float afloat;
-	printf("Size of a char: $lo btye(s)\n", sizeof(acharacter));
+	printf("Size of a char: %lo btye(s)\n", sizeof(acharacter));
 	printf("Size of an int: %lo byte(s)\n", sizeof(ainteger));
 	printf("Size of a long int: %lo bytes(s)\n", sizeof(along));
 	printf("Size of a long long int: %lo byte(s)\n", sizeof(alonglong));
