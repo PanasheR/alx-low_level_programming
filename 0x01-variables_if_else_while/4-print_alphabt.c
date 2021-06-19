@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - Print the alphabet in lowercase letters, except for e and q
+* main - Entry point
 *
 * Return: Always 0 (Success)
 */
@@ -15,7 +15,6 @@ int main(void)
 		{
 			putchar(letter);
 		}
-	}
-	putchar('\n');
+	} putchar('\n');
 	return (0);
 }
