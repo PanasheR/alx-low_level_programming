@@ -9,7 +9,8 @@
  */
 int main(void)
 {
-	char alphabet, alphabet = 'a';
+	char alphabet;
+	alphabet = 'a\t';
 	while (alphabet <= 'z')
 	{
 		putchar(alphabet);
