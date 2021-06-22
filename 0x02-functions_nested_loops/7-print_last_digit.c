@@ -1,4 +1,3 @@
-  
 #include "holberton.h"
 /*file: 7-print_last_digit.c*/
 /**
