@@ -1,5 +1,4 @@
-  
-#include "holberton.h"
+  #include "holberton.h"
 /*file: 6-abs.c*/
 /**
  * _abs - computes the absolute value of an integer.
