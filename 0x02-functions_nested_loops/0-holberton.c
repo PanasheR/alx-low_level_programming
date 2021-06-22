@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main(main)
+int main(void)
 {
 	char str[] = "Holberton";
 	int i, n;
