@@ -1,0 +1,1 @@
+Directory contains files with script containg C array and pointers code.
