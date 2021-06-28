@@ -6,8 +6,8 @@
  * @n: function parameter
  * @a: function parameter
  */
- void print_array(int *a, int b)
- {
+void print_array(int *a, int n)
+{
 	int i;
 
 	for (i = 0; i <= n - 1; i++)
