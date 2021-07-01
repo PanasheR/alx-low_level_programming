@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-#include "string.h"
 
 /**
  * _strncat - appends src to dest
