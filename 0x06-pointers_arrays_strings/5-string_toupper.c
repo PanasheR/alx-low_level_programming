@@ -3,7 +3,7 @@
 
 /**
  * string_toupper - transform lowercase to uppercase
- * @n: function parameter
+ * @n: function parameter, pointer
  * Return: n
  */
 char *string_toupper(char *n)
