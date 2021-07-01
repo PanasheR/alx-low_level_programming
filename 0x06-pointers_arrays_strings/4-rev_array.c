@@ -4,7 +4,7 @@
 /**
  * reverse_array - reverse array intergers
  * @a: function parameter,array
- * @n: function parameter, array number of items
+ * @n: function parameter, number of items
  * Return: void
  */
 void reverse_array(int *a, int n)
