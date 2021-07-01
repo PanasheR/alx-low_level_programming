@@ -1,11 +1,12 @@
 #include "holberton.h"
-#include <stdio.h>
-
+/*file: 1-strncat.c*/
 /**
- * _strncat - appends src to dest
- * @dest: function parameter
- * @src: function parameter
- * @n: function parameter
+ * _strncat - concatenates two strings
+ *
+ * @dest: string destination pointer parameter
+ * @src: string source pointer parameter
+ * @n: number of bytes from source
+ *
  * Return: pointer to dest
  */
 char *_strncat(char *dest, char *src, int n)
