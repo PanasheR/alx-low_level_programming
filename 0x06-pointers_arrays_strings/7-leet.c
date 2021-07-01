@@ -1,10 +1,9 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * leet - encode a string into 1337
+ * leet - encode string into 1337
  * @n: function parameter
- * Return: n 
+ * Return: n value
  */
 char *leet(char *n)
 {
