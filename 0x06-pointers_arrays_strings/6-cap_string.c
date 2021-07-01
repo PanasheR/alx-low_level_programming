@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * cap_string - capitalizes all words of a string
+ * cap_string - capitalizes all letter of a string
  * @n: function parameter
  * Return: string
  */
