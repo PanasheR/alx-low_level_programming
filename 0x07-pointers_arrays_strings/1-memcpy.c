@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * _memset - fills a memory with constant byte
- * @dest: function argument
- * @src: second function argument
- * @n: function parameter
- * Return: return dest
+ * _memcpy - copies n bytes from memory area src to memory are dest
+ * @dest: first argument 
+ * @src : second argument
+ * @n : number of bytes
+ * Return: pointer to dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
