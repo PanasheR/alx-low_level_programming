@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stddef.h>
 
 /* file: 2-strchr.c*/
 /**
