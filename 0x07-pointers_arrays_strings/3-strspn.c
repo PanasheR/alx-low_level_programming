@@ -1,12 +1,10 @@
 #include "holberton.h"
-/*file: 3-strspn.c*/
+
 /**
  * _strspn - returns the number of bytes in the initial segment of s
  * which consist only of bytes from accept
- *
  * @s : string parameter
  * @accept : bytes to compare in s
- *
  * Return: i, number of accepted bytes
  */
 unsigned int _strspn(char *s, char *accept)
