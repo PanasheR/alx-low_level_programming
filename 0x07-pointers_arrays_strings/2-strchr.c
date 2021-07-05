@@ -1,7 +1,5 @@
 #include "holberton.h"
-#include <stddef.h>
 
-/* file: 2-strchr.c*/
 /**
  * _strchr - returns a pointer to the firstoccurrence
  * of the character c in the string
