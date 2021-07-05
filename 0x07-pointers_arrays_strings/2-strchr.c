@@ -3,7 +3,7 @@
 
 /* file: 2-strchr.c*/
 /**
- * _strchr - returns a pointer to the first accurrence
+ * _strchr - returns a pointer to the firstoccurrence
  * of the character c in the string
  * @s : char under investigation
  * @c : char investigating s
@@ -23,5 +23,6 @@ char *_strchr(char *s, char c)
 
 		i++;
 	}
+
 	return (NULL);
 }
