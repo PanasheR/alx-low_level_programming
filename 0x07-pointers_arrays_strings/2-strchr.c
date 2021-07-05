@@ -1,12 +1,19 @@
 #include "holberton.h"
+#include <stddef.h>
 
+/* file: 2-strchr.c*/
 /**
- * _strchr - returns a pointer to the firstoccurrence
+ * _strchr - returns a pointer to the first accurrence
  * of the character c in the string
- * @s : char under investigation
- * @c : char investigating s
- * Return: points to function result or null
+ *
+ * @s : string in which to find the first occurrence of char c
+ * @c : char to find in string s
+ *
+ * Return: pointer to the fist occurence of char c, NULL if not found
+ *
+ *
  */
+
 char *_strchr(char *s, char c)
 {
 	int i;
