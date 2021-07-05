@@ -6,6 +6,7 @@
  * @s: function argument
  * @b: second function argument
  * @n: function parameter
+ * Return: return s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
