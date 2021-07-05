@@ -23,11 +23,11 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == c)
 		{
-			break;
+			return (s + i);
 		} else 
                 {
 			return (NULL);
 	        }
 	}	
-	        return (c);
+	return (s);
 }
