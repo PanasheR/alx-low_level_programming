@@ -9,7 +9,6 @@
  * @c : char investigating s
  * Return: points to function result or null
  */
-
 char *_strchr(char *s, char c)
 {
 	int i;
@@ -24,6 +23,5 @@ char *_strchr(char *s, char c)
 
 		i++;
 	}
-
 	return (NULL);
 }
