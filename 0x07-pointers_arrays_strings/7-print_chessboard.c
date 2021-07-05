@@ -1,12 +1,10 @@
 #include "holberton.h"
-/*file: 7-print_chessboard*/
+
+
 /**
  * print_chessboard - prints the chessboard
- *
- * @a : chessboard configuration
- *
+ * @a : chessboard array container
  * Return: void
- *
  */
 void print_chessboard(char (*a)[8])
 {
