@@ -1,12 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
-/*file: 8-print_diagsums.c*/
+
 /**
  * print_diagsums - prints the sum of the two diagonals of a square matrix
- *
  * @a : square matrix array
  * @size : size of the array
- *
  * Return: void
  */
 void print_diagsums(int *a, int size)
