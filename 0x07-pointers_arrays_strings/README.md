@@ -1,0 +1,1 @@
+The directory contains C files with scripts of arrays, pointers and strings including point-to-pointpointerss and two dimensional arrays.
