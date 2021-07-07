@@ -14,5 +14,5 @@
 int main(void)
 {
  _putchar(str);
- return (00;
+ return (0);
 }
