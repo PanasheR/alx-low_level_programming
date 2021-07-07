@@ -13,6 +13,6 @@
 
 int main(void)
 {
- _putchar(str);
+ _putchar("%c", _puts_recusion(*str));
  return (0);
 }
