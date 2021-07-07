@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * _puts_recursion - prints a string and line
  * @s: string
