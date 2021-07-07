@@ -2,7 +2,7 @@
 
 /**
  * factorial - returns factorial of a number
- * @n : interger 
+ * @n: interger
  * Return: -1 if n is lower than 0, factorial otherwise
  */
 int factorial(int n)
