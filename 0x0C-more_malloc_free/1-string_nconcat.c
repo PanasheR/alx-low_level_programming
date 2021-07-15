@@ -1,21 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * _strlen - returns the length of a string.
- * @s: pointer to String
- * Return: Nothing
- */
-unsigned int _strlen(char *s)
-{
-	unsigned int i = 0;
-
-	while (*(s + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-/**
  * string_nconcat - function that concatenates two strings.
  * @s1: string to destiny to concat
  * @s2: string to source to concat
@@ -24,41 +9,38 @@ unsigned int _strlen(char *s)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int length = 0, len_1 = 0, len_2 = 0, i, j;
+	char *strc;
+	unsigned int lan1, lan2, lam, i;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
+
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 
-	len_1 = _strlen(s1);
-	len_2 = _strlen(s2);
+	for (ls1 = 0; s1[ls1] != '\0'; lan1++)
+		;
 
-	if (n >= len_2)
-	{
-		n = len_2;
-	}
-	length = len_1 + n;
+	for (ls2 = 0; s2[ls2] != '\0'; lan2++)
+		;
 
-	p = malloc((length + 1) * sizeof(*p));
-	if (p == NULL)
-	{
+	if (n > ls2)
+		n = ls2;
+
+	lam = lan1 + n;
+
+	strc = malloc(lam + 1);
+
+	if (strc == NULL)
 		return (NULL);
-	}
 
-	for (i = 0; i < len_1; i++)
-	{
-		*(p + i) = *(s1 + i);
-	}
-	for (j = 0; j < n; j++)
-	{
-		*(p + len_1 + j) = *(s2 + j);
-	}
-	*(p + len_1 + j) = '\0';
-	return (p);
+	for (i = 0; i < lam; i++)
+		if (i < lan1)
+			strc[i] = s1[i];
+		else
+			strc[i] = s2[i - ls1];
+
+	strc[i] = '\0';
+
+	return (strc);
 }
