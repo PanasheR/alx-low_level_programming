@@ -20,13 +20,12 @@ unsigned int _strlen(char *s)
  * @s1: string to destiny to concat
  * @s2: string to source to concat
  * @n: amount of characters to copy from s1 to s2
- *
  * Return: pointer to address of new concat string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int lenght = 0, len_1 = 0, len_2 = 0, i, j;
+	unsigned int length = 0, len_1 = 0, len_2 = 0, i, j;
 
 	if (s1 == NULL)
 	{
@@ -44,9 +43,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = len_2;
 	}
-	lenght = len_1 + n;
+	length = len_1 + n;
 
-	p = malloc((lenght + 1) * sizeof(*p));
+	p = malloc((length + 1) * sizeof(*p));
 	if (p == NULL)
 	{
 		return (NULL);
