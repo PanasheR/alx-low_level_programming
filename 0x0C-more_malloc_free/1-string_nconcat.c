@@ -1,15 +1,17 @@
 #include "holberton.h"
 #include <stdlib.h>
+
 /**
- * string_nconcat - function that concatenates two strings.
- * @s1: string to destiny to concat
- * @s2: string to source to concat
- * @n: amount of characters to copy from s1 to s2
- * Return: pointer to address of new concat string
+ * string_nconcat - concatenates two strings.
+ * @s1: first string.
+ * @s2: second string.
+ * @n: amount of bytes.
+ *
+ * Return: pointer to the allocated memory.
+ * if malloc fails, status value is equal to 98.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	
 	char *sout;
 	unsigned int ls1, ls2, lsout, i;
 
