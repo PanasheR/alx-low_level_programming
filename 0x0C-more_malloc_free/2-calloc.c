@@ -1,12 +1,29 @@
-#include <stdlib.h>
 #include "holberton.h"
-
+#include <stdlib.h>
 /**
- * _calloc - allocates memory for an array, using malloc
- * @nmemb: the number of elements in an array
- * @size: the number of bytes in memory
+ * _memset - fills memory with a constant byte.
+ * @s: address begin to fill
+ * @b: value to set on memory
+ * @n: numbers of bytes to pointed by s
+ * Return: char
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int cont = 0;
+
+	while (cont < n)
+	{
+		*(s + cont) = b;
+		cont++;
+	}
+	return (s);
+}
+/**
+ * _calloc - function that allocates memory for an array, using malloc
+ * @nmemb: amount to values to store on memory
+ * @size: number of bytes of datatype
  *
- * Return: a pointer to an allocated space in memory
+ * Return: Void pointer
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -14,28 +31,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
+	p = malloc(nmemb * size);
 
-	p = malloc(size * nmemb);
-		if (p == NULL)
-			return (NULL);
+	if (p == NULL)
+		return (NULL);
 
-		_memset(p, 0, nmemb * size);
-		return (p);
-}
-/**
- * _memset - fills the first n bytes of the memory area pointed to by s
- * @s: the memory to fill
- * @b: the constant byte
- * @n: the number of bytes to fill
- *
- * Return: a pointed to the memory area s
- */
-char *_memset(char *s, char b, unsigned int n)
-{
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-		s[i] = b;
-
-	return (s);
+	_memset(p, 0, size * nmemb);
+	return (p);
 }
