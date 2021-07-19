@@ -1,75 +1,53 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
- * _strcpy - function that copies the string pointed to
- * @dest: pointer to string entry data
- * @src: destiny data
- * Return: return value of dest
- */
-
-void *_strcpy(char *dest, char *src)
-{
-	int i = 0;
-
-	if (src != '\0')
-	{
-		for (i = 0;  *(src + i) != '\0'; i++)
-		{
-			*(dest + i) = *(src + i);
-		}
-	}
-
-	*(dest + i) = '\0';
-	return (dest);
-}
-/**
- * _strlen - returns the length of a string.
- * @s: pointer to String
- * Return: Nothing
- */
-unsigned int _strlen(char *s)
-{
-	unsigned int i = 0;
-
-	while (*(s + i) != '\0')
-	{
-		i++;
-	}
-
-	return (i);
-}
-/**
- * new_dog - function that creates a new dog
- * @name: name to create a new struct
- * @age: age to create a new struct
- * @owner: owner to create a new struct
+ * new_dog - create a new dog fuction
+ * @name: the dog's name
+ * @age: the dog's age
+ * @owner: the dog owner's name
  *
- * Return: dog struct
+ * Return: A pointer to a new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *n_dog;
+	dog_t *new;
+	int name_new = 0, owner_new = 0, i;
 
-	n_dog =  malloc(sizeof(dog_t));
-	if (n_dog)
+	for (; name[name_new]; name_new++)
+		;
+	for (; owner[owner_new]; owner_new++)
+		;
+
+	new = malloc(sizeof(dog_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->name = malloc(sizeof(char) * (name_new + 1));
+	if (new->name == NULL)
 	{
-		n_dog->name = malloc((_strlen(name) + 1) * sizeof(char));
-		if (n_dog->name)
-		{
-			n_dog->owner = malloc((_strlen(owner) + 1) * sizeof(char));
-			if (n_dog->owner)
-			{
-				_strcpy(n_dog->name, name);
-				_strcpy(n_dog->owner, owner);
-				n_dog->age = age;
-				return (n_dog);
-			}
-			else
-				free(n_dog->name);
-				free(n_dog);
-		}
-		else
-			free(n_dog);
+		free(new);
+		return (NULL);
 	}
-	return (NULL);
+
+	new->owner = malloc(sizeof(char) * (owner_new + 1));
+	if (new->owner == NULL)
+	{
+		free(new->name);
+		free(new);
+		return (NULL);
+	}
+
+	for (i = 0; name[i]; i++)
+		new->name[i] = name[i];
+	new->name[i] = '\0';
+
+	for (i = 0; owner[i]; i++)
+		new->owner[i] = owner[i];
+	new->owner[i] = '\0';
+
+	new->age = age;
+
+	return (new);
 }
