@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * _pow - function to do a pow
