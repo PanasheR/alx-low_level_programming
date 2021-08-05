@@ -1,24 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-/**
- * _pow - function to do a pow
- * @base: base of potency
- * @power: exponent
- *
- * Return: value of potency
- */
-unsigned int _pow(int base, unsigned int power)
-{
-	unsigned int result = 1, i;
-
-	for (i = 0; i < power; i++)
-	{
-		result = result * base;
-	}
-
-	return (result);
-}
-
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int
  * @b: is pointing to a string of 0 and 1 chars
@@ -27,30 +7,23 @@ unsigned int _pow(int base, unsigned int power)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int lenght = 0, decimal = 0;
-	int i;
+	unsigned int dec = 0, i = 0, uint = 0, len;
 
-	if (b == '\0')
+	if (b == NULL || b[0] == '\0')
 		return (0);
 
-	while (b[lenght])
+	for (len = 0; b[len] != '\0'; len++)
 	{
-		if (b[lenght] != '1' && b[lenght] != '0')
-		{
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-		}
-		lenght++;
 	}
+	len = len - 1;
 
-	i = lenght - 1;
-	lenght = 0;
-	for ( ; i >= 0; --i)
+	while (i <= len)
 	{
-		if (b[i] == '1')
-		{
-			decimal = decimal + _pow(2, lenght);
-		}
-		lenght++;
+		dec = (b[i] - '0') << (len - i);
+		uint = dec + uint;
+		i++;
 	}
-	return (decimal);
+	return (uint);
 }
