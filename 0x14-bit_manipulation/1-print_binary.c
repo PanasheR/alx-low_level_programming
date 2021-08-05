@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * binary_recursion - Function to print decimal in binart format
  * without thhe first zero
