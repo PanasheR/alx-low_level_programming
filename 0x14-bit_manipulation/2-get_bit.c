@@ -15,13 +15,8 @@ int get_bit(unsigned long int n, unsigned int index)
 		return (-1);
 	}
 
-	/* Deslizamos hacia la derecha un bit set en 1 index veces */
 	index_slide = 1 << index;
-	/* Se realiza una and entre nuestra nueva variable y n */
 	validate = n & index_slide;
-	/* en el caso de que la comparación de estas dos variables */
-	/* sea verdadera el valor del bit seleccionado es 1 de lo */
-	/* contrario es 0 */
 	if (index_slide == validate)
 		return (1);
 	return (0);
