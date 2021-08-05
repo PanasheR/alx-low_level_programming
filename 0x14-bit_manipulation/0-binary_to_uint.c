@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _pow - function to do a pow
  * @base: base of potency
