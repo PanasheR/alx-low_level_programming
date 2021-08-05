@@ -1,6 +1,7 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _MAIN_
+#define _MAIN_
 
+#include <stdlib.h>
 
 int _putchar(char c);
 unsigned int _pow(int base, unsigned int power);
@@ -12,4 +13,4 @@ int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 
-#endif /* _MAIN_H_ */
+#endif
