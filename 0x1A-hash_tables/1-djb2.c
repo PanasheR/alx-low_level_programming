@@ -1,26 +1,21 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_create - create a hash table
- * @size: size of the table
- * Return: pointer to the table
- **/
-hash_table_t *hash_table_create(unsigned long int size)
+ * hash_djb2 - the djb2 algorithm
+ * @str: Char pointer of data to be hashed
+ * Source: http://www.cse.yorku.ca/~oz/hash.html
+ * Return: Unsigned long int
+ */
+
+unsigned long int hash_djb2(const unsigned char *str)
 {
-	hash_table_t *ht;
+	unsigned long int hash;
+	int c;
 
-	if (size == 0)
-	return (NULL);
-	ht = malloc(sizeof(hash_table_t));
-	if (ht == NULL)
-		return (NULL);
-
-	ht->size = size;
-	ht->array = calloc(size, sizeof(hash_node_t *));
-	if (ht->array == NULL)
+	hash = 5381;
+	while ((c = *str++))
 	{
-		free(ht);
-		return (NULL);
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 	}
-	return (ht);
+	return (hash);
 }
