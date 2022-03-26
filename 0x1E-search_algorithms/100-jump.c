@@ -1,35 +1,39 @@
 #include "search_algos.h"
 
 /**
-  * jump_search - Self explanatory.
-  * @array: Pointer to 1st element of the array.
-  * @size: The size of array.
-  * @value: The value to search for.
-  * Return: Return 1st element and NULL if value not found
-  */
+ * jump_search - func searches array for a value
+ * @array: target array
+ * @size: array length
+ * @value: method array
+ * Return: return 1st element found and NULL if not
+ */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t j, dest, step;
+	size_t y = 0;
+	int step = sqrt(size);
 
-	if (array == NULL || size == 0)
+	if (!array || size == 0)
 		return (-1);
-
-	step = sqrt(size);
-	for (j = dest = 0; dest < size && array[dest] < value;)
+	while (array[y] < value)
 	{
-		printf("Value checked array[%ld] = [%d]\n", dest, array[dest]);
-		j = dest;
-		dest += step;
+		printf("Value checked array[%lu] = [%d]\n", y, array[y]);
+		y += step;
+		if (y >= size)
+			break;
 	}
-
-	printf("Value found between indexes [%ld] and [%ld]\n", j, dest);
-
-	if (dest >= size)
-		dest = size - 1;
-
-	for (; j < dest && array[j] < value; j++)
-		printf("Value checked array[%ld] = [%d]\n", j, array[j]);
-	printf("Value checked array[%ld] = [%d]\n", j, array[j]);
-
-	return (array[j] == value ? (int)j : -1);
+	printf("Value found between indexes [%lu] and [%lu]\n", y - step, y);
+	y -= step;
+	while (array[y] < value)
+	{
+		printf("Value checked array[%lu] = [%d]\n", y, array[y]);
+		y++;
+		if (y == size)
+			return (-1);
+	}
+	if (array[y] == value)
+	{
+		printf("Value checked array[%lu] = [%d]\n", y, array[y]);
+		return (y);
+	}
+	return (-1);
 }
